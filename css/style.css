@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "GothamRounded-Bold";
+  src: url("fonts/GothamRounded-Bold.eot");
+  src: url("fonts/GothamRounded-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/GothamRounded-Bold.woff2") format("woff2"), url("fonts/GothamRounded-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GothamRounded-Light";
+  src: url("fonts/GothamRounded-Light.eot");
+  src: url("fonts/GothamRounded-Light.eot?#iefix") format("embedded-opentype"), url("fonts/GothamRounded-Light.woff2") format("woff2"), url("fonts/GothamRounded-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GothamRounded-Book";
+  src: url("fonts/GothamRounded-Book.eot");
+  src: url("fonts/GothamRounded-Book.eot?#iefix") format("embedded-opentype"), url("fonts/GothamRounded-Book.woff2") format("woff2"), url("fonts/GothamRounded-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GothamRounded-Medium";
+  src: url("fonts/GothamRounded-Medium.eot");
+  src: url("fonts/GothamRounded-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/GothamRounded-Medium.woff2") format("woff2"), url("fonts/GothamRounded-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background-color: #e0be7f;
+  height: 50%;
+  font-family: "GothamRounded-Bold";
+}
+.header .header-wrap {
+  padding: 1rem;
+  display: flex;
+}
+.header .header-wrap img {
+  width: 10%;
+}
+.header .header-wrap p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.5rem;
+  color: #9c7325;
+}
+
+.content .content-wrap {
+  display: block;
+  padding: 1rem;
+}
+.content .content-wrap .content-box {
+  font-family: GothamRounded-Light;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid;
+  margin-top: 0.5rem;
+}
+
+.popUp {
+  display: none;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  font-family: GothamRounded-Medium;
+  font-size: 12px;
+  z-index: 10;
+}
+.popUp .popUp-content {
+  position: relative;
+  width: 20rem;
+  background-color: #e0be7f;
+  box-shadow: 0px 0px 20px 2px;
+  border-radius: 5%;
+  padding: 0.5rem;
+}
+.popUp .popUp-content .popUp-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 2px;
+}
+.popUp .popUp-content .popUp-title h3 {
+  font-family: GothamRounded-Bold;
+  font-size: 2rem;
+}
+.popUp .popUp-content .popUp-title button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.popUp .popUp-content .popUp-menu {
+  padding: 1rem 0.5rem;
+}
+.popUp .popUp-content .popUp-menu .popUp-order p {
+  font-family: GothamRounded-Bold;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.popUp .popUp-content .popUp-menu .popUp-order select {
+  font-family: GothamRounded-Book;
+}
+.popUp .popUp-content .popUp-menu .popUp-order option {
+  font-family: GothamRounded-Book;
+}
+.popUp .popUp-content .popUp-menu .popUp-menu-order {
+  display: flex;
+  align-items: center;
+}
+.popUp .popUp-content .popUp-menu .popUp-menu-order img {
+  width: 5rem;
+}
+.popUp .popUp-content .popUp-menu .popUp-menu-order .popUp-label {
+  padding-left: 1rem;
+}
+.popUp .popUp-content .popUp-menu .popUp-menu-order .popUp-label label {
+  font-family: GothamRounded-Bold;
+  font-size: 1rem;
+}
+.popUp .popUp-content .popUp-menu .popUp-menu-order .popUp-label p {
+  font-family: GothamRounded-medium;
+}
+.popUp .popUp-content .popUp-menu .Popup-btn {
+  width: 3rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid;
+  margin-left: 70%;
+  background-color: #ffaf1c;
+  cursor: pointer;
+}
+
+.button {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  position: fixed;
+  left: 50%;
+  font-family: GothamRounded-Bold;
+  transform: translateX(-50%);
+  background-color: #ffaf1c;
+  cursor: pointer;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  opacity: 0;
+}
+
+#overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */
