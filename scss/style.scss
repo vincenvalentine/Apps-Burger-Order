@@ -14,7 +14,8 @@
         padding: 1rem;
         display: flex;
        img{
-           width: 10%;
+           width: 2rem;
+           height: 2rem;
        }
        p{
         display: flex;
@@ -27,17 +28,28 @@
 }
 
 .content{
+    .content-title{
+        padding-left: 1rem;
+        padding-top: 1rem;
+        h2{
+            font-family: GothamRounded-Bold;
+        }
+    }
     .content-wrap{
         display: block;
         padding: 1rem;
         .content-box{
+            display: flex;
+            justify-content: space-between;
             font-family: GothamRounded-Light;
             border-radius: 0.5rem;
             padding: 1rem;
             // box-shadow: 0px 0px 6px 0px;
             border: 1px solid;
             margin-top: 0.5rem;
-
+            img{
+                width: 5rem;
+            }
         }
     }
 }
@@ -45,15 +57,13 @@
 .popUp{
     display: none;
     position: fixed;
-    top : 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     padding: 1rem;
     font-family:GothamRounded-Medium;
     font-size: 12px;
     z-index: 10;
     .popUp-content{
-        position: relative;
         width : 20rem;
         // max-width: 80%;
         background-color:#e0be7f;

@@ -4,6 +4,26 @@ let btn = document.getElementById('btn');
 let content = document.getElementById('content');
 let overlay = document.getElementById('overlay');
 
+
+function menuList() {
+    let menuList = [{
+        'CatId': '1',
+        'icon': 'image/burger/png/cheese-burger.png',
+        'description': 'Cheese Burger',
+    }, {
+        'CatId': '2',
+        'icon': 'image/burger/png/burger-egg.png',
+        'description': 'Burger Salted Egg',
+    }, {
+        'CatId': '3',
+        'icon': 'image/burger/png/burger1.png',
+        'description': 'Bacon Burger with sauce cheese',
+    }]
+
+    window.localStorage.setItem('menuList', JSON.stringify(menuList))
+}
+
+
 function showPopUp() {
     popUp.style.display = 'block';
     btn.style.display = 'none';
@@ -42,10 +62,11 @@ function btnOrder() {
     } else {
 
         let CurrentArrayOrderList = JSON.parse(ArrayOrderList);
-
+  
         let orderValue = PopUpOrder.options[PopUpOrder.selectedIndex].value;
         let length = CurrentArrayOrderList.length - 1;
         let IdOrder = CurrentArrayOrderList[length].id + 1;
+     
 
         OrderListObj = {
             'description': orderValue,
@@ -67,8 +88,13 @@ function btnOrder() {
 
 function displayOrderList() {
     let ArrayOrderList = window.localStorage.getItem('OrderList');
-    ArrayOrderList = JSON.parse(ArrayOrderList);
     let content = document.getElementById('content-wrap');
+    ArrayOrderList = JSON.parse(ArrayOrderList);
+    let menuList = window.localStorage.getItem('menuList');
+    menuList = JSON.parse(menuList);
+
+    console.log(menuList);
+    
 
     let boxOrder = [];
 
@@ -77,10 +103,11 @@ function displayOrderList() {
         boxOrder.push(`
             <div class="content-box">
                 <p>${ArrayOrderList[i].description}</p>
+                <img src="image/burger/png/burger-egg.png" alt="" srcset="">
             </div>
             `)
-    
-        }
+
+    }
     join = boxOrder.join('');
     content.innerHTML = join;
 
@@ -89,3 +116,5 @@ function displayOrderList() {
 
 closebtn();
 displayOrderList();
+
+
