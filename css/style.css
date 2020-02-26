@@ -73,7 +73,8 @@
   margin-top: 0.5rem;
 }
 .content .content-wrap .content-box img {
-  width: 5rem;
+  width: 6rem;
+  height: 6rem;
 }
 
 .popUp {
@@ -156,7 +157,10 @@
   display: block;
   padding: 1rem;
   border-radius: 0.5rem;
-  position: fixed;
+  position: relative;
+  margin-bottom: 1rem;
+  width: 5rem;
+  text-align: center;
   left: 50%;
   font-family: GothamRounded-Bold;
   transform: translateX(-50%);
