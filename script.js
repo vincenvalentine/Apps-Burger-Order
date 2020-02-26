@@ -90,22 +90,34 @@ function displayOrderList() {
     let ArrayOrderList = window.localStorage.getItem('OrderList');
     let content = document.getElementById('content-wrap');
     ArrayOrderList = JSON.parse(ArrayOrderList);
-    let menuList = window.localStorage.getItem('menuList');
-    menuList = JSON.parse(menuList);
+    let ArraymenuList = window.localStorage.getItem('menuList');
+    ArraymenuList = JSON.parse(ArraymenuList);
 
-    console.log(menuList);
+    console.log(ArraymenuList);
+    console.log(ArrayOrderList);
+    
     
 
     let boxOrder = [];
 
     for (let i = 0; i < ArrayOrderList.length; i++) {
-
-        boxOrder.push(`
-            <div class="content-box">
-                <p>${ArrayOrderList[i].description}</p>
-                <img src="image/burger/png/burger-egg.png" alt="" srcset="">
-            </div>
-            `)
+        for(let j=0; j < ArraymenuList.length; j++){
+            // let icon = ArraymenuList[j].icon;
+            // let test = (ArrayOrderList[i].description == ArraymenuList[j].description)? icon : '';
+            if(ArrayOrderList[i].description == ArraymenuList[j].description){
+                boxOrder.push(`
+                    <div class="content-box">
+                        <p>${ArrayOrderList[i].description}</p>
+                        <img src="${ArraymenuList[j].icon}" alt="" srcset="">
+                    </div>
+                    `)
+            } else{
+                // console.log('yes');
+                
+            }
+        }
+        // let test = (ArraymenuList[i].description == ArrayOrderList[i].description)? ArraymenuList[i].icon : '';
+        
 
     }
     join = boxOrder.join('');
@@ -113,7 +125,7 @@ function displayOrderList() {
 
 }
 
-
+menuList();
 closebtn();
 displayOrderList();
 
