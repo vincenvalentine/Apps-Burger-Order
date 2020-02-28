@@ -157,13 +157,33 @@
 }
 .Burger-pop .popUp .popUp-content .popUp-menu .popUp-menu-order .popUp-label {
   padding-left: 1rem;
+  width: 100%;
 }
 .Burger-pop .popUp .popUp-content .popUp-menu .popUp-menu-order .popUp-label label {
   font-family: GothamRounded-Bold;
   font-size: 1rem;
 }
-.Burger-pop .popUp .popUp-content .popUp-menu .popUp-menu-order .popUp-label p {
+.Burger-pop .popUp .popUp-content .popUp-menu .popUp-menu-order .popUp-label h5 {
+  font-family: GothamRounded-Light;
+}
+.Burger-pop .popUp .popUp-content .popUp-menu .popUp-menu-order .popUp-label .price {
+  display: flex;
+  justify-content: space-between;
+}
+.Burger-pop .popUp .popUp-content .popUp-menu .popUp-menu-order .popUp-label .price p {
   font-family: GothamRounded-medium;
+  padding: 0.1rem;
+}
+.Burger-pop .popUp .popUp-content .popUp-menu .popUp-menu-order .popUp-label .price .popUp-menu-btn {
+  text-align: center;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  background-color: #19610a;
+  color: white;
+  font-size: 0.5rem;
+  margin-left: 0.5rem;
+  font-family: GothamRounded-Bold;
+  cursor: pointer;
 }
 .Burger-pop .popUp .popUp-content .popUp-menu .Popup-btn {
   text-align: center;
