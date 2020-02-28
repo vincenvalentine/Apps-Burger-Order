@@ -31,6 +31,14 @@
   margin: 0;
 }
 
+.green {
+  color: #0e8843 !important;
+}
+
+.orange {
+  background-color: sandybrown;
+}
+
 .Burger-pop .header {
   background-color: #e0be7f;
   height: 50%;
@@ -54,18 +62,21 @@
 .Burger-pop .content .content-title {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
 }
 .Burger-pop .content .content-title h2 {
   font-family: GothamRounded-Bold;
+  font-size: 1rem;
 }
-.Burger-pop .content .content-title .content-reset-btn {
-  font-family: GothamRounded-Book;
+.Burger-pop .content .content-title .content-title-btn .content-reset-btn {
+  font-family: GothamRounded-Bold;
+  font-size: 0.8rem;
   text-align: center;
   border-radius: 0.5rem;
-  background-color: sandybrown;
   padding: 0.5rem;
   cursor: pointer;
+  margin: 0.5rem;
 }
 .Burger-pop .content .content-wrap {
   position: relative;

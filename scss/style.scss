@@ -6,6 +6,9 @@
 
 }
 
+.green { color: rgb(14, 136, 67) !important;}
+.orange {background-color: sandybrown;}
+
 .Burger-pop{
     // position: relative;
     .header {
@@ -33,18 +36,24 @@
         .content-title{
             display: flex;
             justify-content: space-between;
-            padding: 0.5rem;
+            align-items: center;
+            padding: 0.5rem 1.5rem;
             h2{
                 font-family: GothamRounded-Bold;
+                font-size: 1rem;
             }
+           .content-title-btn{
             .content-reset-btn{
-                font-family: GothamRounded-Book;
+                font-family: GothamRounded-Bold;
+                font-size: 0.8rem;
                 text-align: center;
                 border-radius: 0.5rem;
-                background-color: sandybrown;
+                // background-color: sandybrown;
                 padding: 0.5rem;
                 cursor: pointer;
+                margin: 0.5rem;
             }
+           }
         }
         .content-wrap{
             position: relative;
