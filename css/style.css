@@ -31,53 +31,64 @@
   margin: 0;
 }
 
-.header {
+.Burger-pop .header {
   background-color: #e0be7f;
   height: 50%;
   font-family: "GothamRounded-Bold";
 }
-.header .header-wrap {
+.Burger-pop .header .header-wrap {
   padding: 1rem;
   display: flex;
 }
-.header .header-wrap img {
+.Burger-pop .header .header-wrap img {
   width: 2rem;
   height: 2rem;
 }
-.header .header-wrap p {
+.Burger-pop .header .header-wrap p {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-left: 0.5rem;
   color: #9c7325;
 }
-
-.content .content-title {
-  padding-left: 1rem;
-  padding-top: 1rem;
+.Burger-pop .content .content-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
 }
-.content .content-title h2 {
+.Burger-pop .content .content-title h2 {
   font-family: GothamRounded-Bold;
 }
-.content .content-wrap {
-  display: block;
-  padding: 1rem;
+.Burger-pop .content .content-title .content-reset-btn {
+  font-family: GothamRounded-Book;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: sandybrown;
+  padding: 0.5rem;
+  cursor: pointer;
 }
-.content .content-wrap .content-box {
+.Burger-pop .content .content-wrap {
+  position: relative;
+  width: 20rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  padding: 0.5rem;
+}
+.Burger-pop .content .content-wrap .content-box {
   display: flex;
   justify-content: space-between;
   font-family: GothamRounded-Light;
   border-radius: 0.5rem;
   padding: 1rem;
   border: 1px solid;
-  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
-.content .content-wrap .content-box img {
+.Burger-pop .content .content-wrap .content-box img {
   width: 6rem;
   height: 6rem;
 }
-
-.popUp {
+.Burger-pop .popUp {
   display: none;
   position: fixed;
   left: 50%;
@@ -87,24 +98,24 @@
   font-size: 12px;
   z-index: 10;
 }
-.popUp .popUp-content {
+.Burger-pop .popUp .popUp-content {
   width: 20rem;
   background-color: #e0be7f;
   box-shadow: 0px 0px 20px 2px;
-  border-radius: 5%;
+  border-radius: 0.5rem;
   padding: 0.5rem;
 }
-.popUp .popUp-content .popUp-title {
+.Burger-pop .popUp .popUp-content .popUp-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: solid 2px;
 }
-.popUp .popUp-content .popUp-title h3 {
+.Burger-pop .popUp .popUp-content .popUp-title h3 {
   font-family: GothamRounded-Bold;
   font-size: 2rem;
 }
-.popUp .popUp-content .popUp-title button {
+.Burger-pop .popUp .popUp-content .popUp-title button {
   border: none;
   outline: none;
   cursor: pointer;
@@ -112,37 +123,38 @@
   font-size: 2rem;
   font-weight: bold;
 }
-.popUp .popUp-content .popUp-menu {
+.Burger-pop .popUp .popUp-content .popUp-menu {
   padding: 1rem 0.5rem;
 }
-.popUp .popUp-content .popUp-menu .popUp-order p {
+.Burger-pop .popUp .popUp-content .popUp-menu .popUp-order p {
   font-family: GothamRounded-Bold;
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
-.popUp .popUp-content .popUp-menu .popUp-order select {
+.Burger-pop .popUp .popUp-content .popUp-menu .popUp-order select {
   font-family: GothamRounded-Book;
 }
-.popUp .popUp-content .popUp-menu .popUp-order option {
+.Burger-pop .popUp .popUp-content .popUp-menu .popUp-order option {
   font-family: GothamRounded-Book;
 }
-.popUp .popUp-content .popUp-menu .popUp-menu-order {
+.Burger-pop .popUp .popUp-content .popUp-menu .popUp-menu-order {
   display: flex;
   align-items: center;
 }
-.popUp .popUp-content .popUp-menu .popUp-menu-order img {
+.Burger-pop .popUp .popUp-content .popUp-menu .popUp-menu-order img {
   width: 5rem;
 }
-.popUp .popUp-content .popUp-menu .popUp-menu-order .popUp-label {
+.Burger-pop .popUp .popUp-content .popUp-menu .popUp-menu-order .popUp-label {
   padding-left: 1rem;
 }
-.popUp .popUp-content .popUp-menu .popUp-menu-order .popUp-label label {
+.Burger-pop .popUp .popUp-content .popUp-menu .popUp-menu-order .popUp-label label {
   font-family: GothamRounded-Bold;
+  font-size: 1rem;
 }
-.popUp .popUp-content .popUp-menu .popUp-menu-order .popUp-label p {
+.Burger-pop .popUp .popUp-content .popUp-menu .popUp-menu-order .popUp-label p {
   font-family: GothamRounded-medium;
 }
-.popUp .popUp-content .popUp-menu .Popup-btn {
+.Burger-pop .popUp .popUp-content .popUp-menu .Popup-btn {
   text-align: center;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -152,8 +164,7 @@
   font-family: GothamRounded-Bold;
   cursor: pointer;
 }
-
-.button {
+.Burger-pop .button {
   display: block;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -162,13 +173,13 @@
   width: 5rem;
   text-align: center;
   left: 50%;
+  bottom: 0;
   font-family: GothamRounded-Bold;
   transform: translateX(-50%);
   background-color: #ffaf1c;
   cursor: pointer;
 }
-
-#overlay {
+.Burger-pop #overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -178,8 +189,7 @@
   pointer-events: none;
   opacity: 0;
 }
-
-#overlay.active {
+.Burger-pop #overlay.active {
   pointer-events: all;
   opacity: 1;
 }

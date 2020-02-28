@@ -31,13 +31,17 @@ function showPopUp() {
     overlay.classList.add('active');
 }
 
+
 function closebtn() {
-    popUpClose.addEventListener('click', function () {
+    console.log('here');
+    popUpClose.addEventListener('click', function() {   
+        console.log('here'); 
         popUp.style.display = 'none';
         btn.style.display = 'block';
         content.style.display = 'block';
         overlay.classList.remove('active');
     })
+    // displayZeroContent();
 }
 
 function btnOrder() {
@@ -93,11 +97,7 @@ function displayOrderList() {
     let ArraymenuList = window.localStorage.getItem('menuList');
     ArraymenuList = JSON.parse(ArraymenuList);
 
-    console.log(ArraymenuList);
-    console.log(ArrayOrderList);
     
-    
-
     let boxOrder = [];
 
     for (let i = 0; i < ArrayOrderList.length; i++) {
@@ -116,7 +116,6 @@ function displayOrderList() {
                 
             }
         }
-        // let test = (ArraymenuList[i].description == ArrayOrderList[i].description)? ArraymenuList[i].icon : '';
         
 
     }
@@ -125,8 +124,25 @@ function displayOrderList() {
 
 }
 
+function displayZeroContent(){
+    let ArrayOrderList = window.localStorage.getItem('OrderList');
+    ArrayOrderList = JSON.parse(ArrayOrderList);
+
+    let content = document.getElementById('content-wrap');
+
+    let zero = ((ArrayOrderList == null) || (ArrayOrderList == undefined))? 'none' : '';
+
+    content.style.display = zero;
+
+}
+
+function clearStorage() {
+    localStorage.removeItem("OrderList");
+    location.reload();
+    // displayZeroContent();
+}
+
 menuList();
 closebtn();
 displayOrderList();
-
 

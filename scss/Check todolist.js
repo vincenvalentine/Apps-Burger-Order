@@ -4,8 +4,8 @@ if (parsetoDoList.length == 0) {
     containerNoData.style.display = 'block';
     containerTodoList.style.display = 'none';
 
-    containerNoData.className = containerNoData.className + ' hide';
-    containerNoData.classList.push('hide');
+    containerNoData.Name = containerNoData.Name + ' hide';
+    containerNoData.List.push('hide');
 } else {
     // Hide nodata
     containerNoData.style.display = 'none';
